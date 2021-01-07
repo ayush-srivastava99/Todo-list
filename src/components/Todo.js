@@ -18,6 +18,19 @@ const Todo=(props)=>{
             return item;
         }))
     }
+    if(props.todo.completed)
+    {
+        return (
+            <div className="todo">
+                <li className={`todo-item ${props.todo.completed? "completed":""}`}>{props.todo.text}</li>
+                {/* <button onClick={completehandler} className="complete-btn"><i className="fas fa-check"></i></button> */}
+                <button onClick={deletehandler} className="trash-btn">
+                    <i className="fas fa-trash"></i>
+                </button>
+            </div>
+        )
+    }
+    else{
     return (
         <div className="todo">
             <li className={`todo-item ${props.todo.completed? "completed":""}`}>{props.todo.text}</li>
@@ -27,6 +40,7 @@ const Todo=(props)=>{
             </button>
         </div>
     )
+    }
 }
 
 export default Todo;
