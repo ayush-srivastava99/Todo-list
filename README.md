@@ -1,6 +1,6 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# About the app
+This is a react based web project in which one can add todo items, mark them as completed and delete them.<br>
+Apply filter based on completed and incomplete todo items.
 
 ## Available Scripts
 
