@@ -10,13 +10,14 @@ import Todolist from './components/Todolist';
 function App() {
   const [inputText,setInputText]=useState("");
   const [todos,setTodos]=useState([]);
+  const [status,setStatus]=useState("all");
   return (
     <div className="App">
       <header>
         <h1>Ayush's Todo List</h1>
       </header>
-      <Form todos={todos} setTodos={setTodos} setInputText={setInputText} inputtext={inputText} />
-      <Todolist setTodos={setTodos} todos={todos} />
+      <Form setStatus={setStatus} todos={todos} setTodos={setTodos} setInputText={setInputText} inputtext={inputText} />
+      <Todolist status={status} setTodos={setTodos} todos={todos} />
     </div>
   );
 }

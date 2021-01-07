@@ -14,6 +14,10 @@ const Form=(props)=>{
         ])
         props.setInputText("");
     }
+    const statusHandler=(e)=>{
+        props.setStatus(e.target.value);
+        console.log(e.target.value);
+    }
     return(
         <form>
       <input value={props.inputtext} onChange={inputtexthandler} type="text" className="todo-input" />
@@ -21,7 +25,7 @@ const Form=(props)=>{
         <i className="fas fa-plus-square"></i>
       </button>
       <div className="select">
-        <select name="todos" className="filter-todo">
+        <select onChange={statusHandler} name="todos" className="filter-todo">
           <option value="all">All</option>
           <option value="completed">Completed</option>
           <option value="uncompleted">Uncompleted</option>
