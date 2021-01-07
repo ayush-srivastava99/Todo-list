@@ -3,8 +3,6 @@ import React from 'react'
 
 
 const Todo=(props)=>{
-    if(props.status==="all"||(props.status==="completed"&&props.todo.completed===true)||(props.status==="uncompleted"&&props.todo.completed===false))
-    {
     const deletehandler=()=>{
         props.setTodos(props.todos.filter(el=> el.id !== props.todo.id))
 
@@ -43,8 +41,11 @@ const Todo=(props)=>{
         </div>
     )
     }
-}
-return "";
+//     if(props.status==="all"||(props.status==="completed"&&props.todo.completed===true)||(props.status==="uncompleted"&&props.todo.completed===false))
+//     {
+    
+// }
+// return "";
 }
 
 export default Todo;

@@ -5,7 +5,7 @@ const Todolist=(props)=>{
         <div className="todo-container">
       <ul className="todo-list">
             {
-                props.todos.map((t)=>(
+                props.filteredTodos.map((t)=>(
                 
                 <Todo status={props.status} setTodos={props.setTodos} key={t.id} todo={t} todos={props.todos}/>))
             }
